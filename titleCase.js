@@ -4,7 +4,5 @@ function titleCase(str) {
     return letter.toUpperCase();
   });
   
-  console.log(str); //Displays "Hello World"
-  
   return str;
 }
