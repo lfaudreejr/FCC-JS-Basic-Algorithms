@@ -14,25 +14,28 @@ function caesars(str) { // LBH QVQ VG!
     var cipher = ascii + 13;
     if(ascii <= 90 && cipher > 90)
     {
-      
+      //keep cipher between A-Z if it may fall outside that range
       do
       {
         cipher = ((cipher - 91) + 65);
         console.log(cipher);
       }
       while (cipher > 90);
-
+      //store new cipher and convert to output
       temp = String.fromCodePoint(cipher);
       output += temp;
 
     }
     else if (ascii <= 90 && ascii >= 65)
     {
+      //if cipher is uppercase is between 65 and 90
+      //store new cipher and convert to output
       temp = String.fromCodePoint(cipher);
       output += temp;
     }
     else
     {
+      //anything that should not be A-Z gets printed normal
       temp = String.fromCodePoint(ascii);
       output += temp;
     }
