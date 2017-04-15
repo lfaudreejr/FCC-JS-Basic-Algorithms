@@ -4,7 +4,5 @@ function titleCase(str) {
     return letter.toUpperCase();
   });
   
-  console.log(str);
-  
   return str;
 }
