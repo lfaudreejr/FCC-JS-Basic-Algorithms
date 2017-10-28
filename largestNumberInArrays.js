@@ -1,26 +1,17 @@
 function largestOfFour(arr) {
+  //RETURN LARGEST NUMBERS IN ARRAYS  //
+  //Return an Array consisting of the largest number from each sub-array//
 
-//RETURN LARGEST NUMBERS IN ARRAYS  //
-//Return an Array consisting of the largest number from each sub-array//
-var largest = [];
-  
-    for(var i = 0, j = arr.length; i < j; i++){
-      var n = 0;
-      
-      for(var k = 0, l = arr[i].length; k < l; k++){
-   
-        
-        if(n < arr[i][k]){
-          n = arr[i][k];
-        }
-        
-        
-      }
-      
-      largest.push(n);
-      
-    }
-  
-  return largest;
-  
+  return arr.map(function(a) {
+    return a.reduce(function(x, y) {
+      return x < y ? y : x;
+    });
+  });
 }
+
+largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1]
+]);

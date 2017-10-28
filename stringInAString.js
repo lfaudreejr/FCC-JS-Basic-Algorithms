@@ -1,22 +1,16 @@
 function mutation(arr) {
-  
-  var arr1 = arr[0].toLowerCase();
-  var arr2 = arr[1].toLowerCase();
+  var arg1 = arr[0].toLowerCase();
+  var arg2 = arr[1].toLowerCase();
   var count = 0;
-  
-    for(var j = 0, l = arr2.length; j < l; j++ ) {
-      var k = arr1.indexOf(arr2[j]);
-      console.log(k);
-      if (k !== -1){
-        count++;
-      }
-    }
-  
-  
-  if(count === arr2.length){
-    return true;
-  }
-  
-  return false;
 
+  for (var i = 0, l = arg2.length; i < l; i++) {
+    var index = arg1.indexOf(arg2[i]);
+    if (index !== -1) {
+      count++;
+    }
+  }
+
+  return count === arg2.length ? true : false;
 }
+
+mutation(["hello", "hey"]);
